@@ -18,24 +18,14 @@ namespace AppBancoDigital.View
         {
             InitializeComponent();
             NavigationPage.SetHasNavigationBar(this, false);
-            logo.Source = ImageSource.FromResource("AppBancoDigital.Assets.JotaBank_Logo.png");
+            logo.Source = ImageSource.FromResource("AppBancoDigital.Assets.logo.png");
         }
 
         private async void btn_acessar_Clicked(object sender, EventArgs e)
         {
             try
             {
-                //if (onlynumber(cpf_inserido.Text) == "11111111111" & senha_inserida.Text == "123")
-                //{
-                //    //--criar página inicial para o usuario depois do login
-                //    //await Navigation.PushAsync(new CadastroCliente());
-
-                //    await DisplayAlert("Sucesso!", "Login correto", "OK");
-                //}
-                //else
-                //{
-                //    DisplayAlert("Erro!", "CPF ou senha Inválidos.\nTente Novamente", "OK");
-                //}
+                
 
                 Model.Correntista c = await DataServiceCorrentista.LoginAsync(new Model.Correntista
                 {
@@ -47,7 +37,7 @@ namespace AppBancoDigital.View
                 {
                     App.DadosCorrentista = c;
                     App.Current.MainPage = new NavigationPage(new View.Home());
-                    //App.Current.MainPage = new View.TelaInicial();
+                   
                 }
                 else
                     throw new Exception("CPF ou senha Inválidos.\nTente Novamente!");
@@ -62,7 +52,7 @@ namespace AppBancoDigital.View
         {
             try
             {
-                //App.Current.MainPage = new View.CadastroCliente();
+                
                 Navigation.PushAsync(new View.CadastroCliente());
             }
             catch (Exception ex)

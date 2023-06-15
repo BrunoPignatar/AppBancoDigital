@@ -11,9 +11,17 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="View\Correntista\LoadingPoPup.xaml.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Remove="View\Correntista\LoadingPoPup.xaml" />
+  </ItemGroup>
+
+  <ItemGroup>
     <None Remove="Assets\eyeOff.png" />
     <None Remove="Assets\eyeOn.png" />
-    <None Remove="Assets\JotaBank_Logo.png" />
+    <None Remove="Assets\logo.png" />
   </ItemGroup>
 
   <ItemGroup>
@@ -23,7 +31,7 @@
     <EmbeddedResource Include="Assets\eyeOn.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </EmbeddedResource>
-    <EmbeddedResource Include="Assets\JotaBank_Logo.png">
+    <EmbeddedResource Include="Assets\logo.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </EmbeddedResource>
   </ItemGroup>
@@ -43,9 +51,6 @@
 
   <ItemGroup>
     <EmbeddedResource Update="View\Correntista\CadastroCorrentista.xaml">
-      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
-    </EmbeddedResource>
-    <EmbeddedResource Update="View\Correntista\LoadingPoPup.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
     <EmbeddedResource Update="View\Acesso\Login.xaml">

@@ -31,7 +31,7 @@ namespace AppBancoDigital.View
 
         private void VerNaover_senha_Clicked(object sender, EventArgs e)
         {
-            //FUNÇÃO DE MOSTRAR SENHA -- OK
+           
             try
             {
                 if (vendo == false)
@@ -46,7 +46,7 @@ namespace AppBancoDigital.View
                     vendo = false;
                     senha_inserido.IsPassword = true;
                 }
-                //VendoNaoVendo(vendo);
+                
             }
             catch (Exception ex)
             {
@@ -57,7 +57,7 @@ namespace AppBancoDigital.View
 
         private void VerNaover_senha2_Clicked(object sender, EventArgs e)
         {
-            //FUNÇÃO DE MOSTRAR SENHA -- OK
+            
             try
             {
                 if (vendo2 == false)
@@ -72,7 +72,7 @@ namespace AppBancoDigital.View
                     vendo2 = false;
                     senhaConfirm_inserido.IsPassword = true;
                 }
-                //VendoNaoVendo(vendo2);
+                
             }
             catch (Exception ex)
             {
@@ -82,14 +82,14 @@ namespace AppBancoDigital.View
 
         private async void btn_cadastrar_Clicked(object sender, EventArgs e)
         {
-            //FUNÇÃO DE CADASTRAR CORRENTISTA
+            
             try
             {
                 if (senhaConfirm_inserido.Text == senha_inserido.Text)
                 {
                     string senha = senha_inserido.Text;
 
-                    //ARRUMAR CADASTRO
+                    
                     Correntista c = new Correntista
                     {
                         Nome = nome_inserido.Text,
@@ -97,8 +97,7 @@ namespace AppBancoDigital.View
                         Data_nasc = dtpck_dataNasc.Date.ToString("yyyy-MM-dd"),
                         Senha = senha
                     };
-                    //await DisplayAlert("Sucesso!", "Novo Cliente Cadastrado com Sucesso!", "Ir para Tela Inicial");
-                    //App.Current.MainPage = new NavigationPage(new View.Home());
+                   
 
                     if (c.Id == null)
                     {
@@ -106,8 +105,7 @@ namespace AppBancoDigital.View
                         App.DadosCorrentista = c;
                         await DisplayAlert("Sucesso!", "Novo Cliente Cadastrado com Sucesso!", "Ir para Tela Inicial");
 
-                        //Navegando para a Tela Inicial após cadastrar e definir os dados do Correntista.
-                        //await Navigation.PushAsync(new View.TelaInicial());
+                        
                     }
                     else
                         throw new Exception("Ocorreu um erro ao realizar seu cadastro.\nTente Novamente ou realize o Login se já possui uma conta.");
@@ -116,7 +114,7 @@ namespace AppBancoDigital.View
                 {
                     await DisplayAlert("Senhas diferentes!", "Confirme a senha digitada inicialmente", "OK");
                 }
-                //Navigation.ShowPopup(new LoadingPoPup());
+               
 
             }
             catch (Exception ex)
@@ -127,7 +125,7 @@ namespace AppBancoDigital.View
 
         private void btn_voltar_Clicked(object sender, EventArgs e)
         {
-            //VOLTAR PARA O LOGIN -- OK
+           
 
             try
             {

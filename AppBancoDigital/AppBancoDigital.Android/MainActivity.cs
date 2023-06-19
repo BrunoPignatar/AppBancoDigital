@@ -18,7 +18,7 @@ namespace AppBancoDigital.Droid
             global::Xamarin.Forms.Forms.Init(this, savedInstanceState);
             LoadApplication(new App());
 
-            Window.SetStatusBarColor(Android.Graphics.Color.ParseColor("#00A6F0"));
+            Window.SetStatusBarColor(Android.Graphics.Color.ParseColor("#CDFFD8"));
         }
         public override void OnRequestPermissionsResult(int requestCode, string[] permissions, [GeneratedEnum] Android.Content.PM.Permission[] grantResults)
         {

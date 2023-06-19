@@ -36,7 +36,7 @@ namespace AppBancoDigital.View
                 if (c.Id != null)
                 {
                     App.DadosCorrentista = c;
-                    App.Current.MainPage = new NavigationPage(new View.Home());
+                    App.Current.MainPage = new NavigationPage(new View.CadastroCliente());
                    
                 }
                 else

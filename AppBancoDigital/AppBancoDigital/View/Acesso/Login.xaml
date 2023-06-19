@@ -6,10 +6,10 @@
     <ContentPage.Background>
         <!-- StartPoint defaults to (0,0) -->
         <LinearGradientBrush EndPoint="0,1">
-            <GradientStop Color="#00A6F0"
+            <GradientStop Color="#CDFFD8"
                           Offset="0.1" />
-            <GradientStop Color="#00D5D9"
-                          Offset="0.7" />
+            <GradientStop Color="#94B9FF"
+                          Offset="1.0" />
         </LinearGradientBrush>
     </ContentPage.Background>
     <ContentPage.Content>
@@ -22,7 +22,7 @@
                    />
 
 
-            <Frame CornerRadius="15"
+            <Frame CornerRadius="18"
                    BorderColor="White"
                    HeightRequest="320"
                    WidthRequest="320"
@@ -37,36 +37,33 @@
                 <StackLayout>
                     <Label Text="ACESSAR A SUA CONTA"
                            TextColor="White"
-                           FontSize="23" Style="{StaticResource bold}"
+                           FontSize="23"
                            FontAttributes="Bold"
                            HorizontalTextAlignment="Center"/>
 
                     <Label Text="CPF" 
-                           TextColor="white"
-                           FontSize="15" FontAttributes="Bold"
+                           TextColor="Black"
+                           FontSize="20" FontAttributes="Bold"
                            Margin="5,5,0,0"
-                           Style="{StaticResource bold}"/>
+                           />
                     <Entry x:Name="cpf_inserido"
-                           Placeholder="Digite seu CPF(sem pontos e traços)" PlaceholderColor="Gainsboro"
-                           Margin="0,0,0,0" TextColor="White" Style="{StaticResource regular}"
+                           Placeholder="Digite seu CPF" PlaceholderColor="White"
+                           FontAttributes="Italic"
+                           Margin="0,0,0,0" TextColor="White" 
                            MaxLength="14" Keyboard="Numeric"
                            >
-                        <Entry.Behaviors>
-                            <xct:MaskedBehavior 
-                            Mask="AAA.AAA.AAA-AA" 
-                            UnMaskedCharacter="A"
-                        />
-                        </Entry.Behaviors>
+                       
                     </Entry>
 
                     <Label Text="Senha" 
-                           TextColor="white"
-                           FontSize="15" FontAttributes="Bold"
-                           Margin="5,0,0,0" Style="{StaticResource bold}"/>
+                           TextColor="Black"
+                           FontSize="20" FontAttributes="Bold"
+                           Margin="5,0,0,0" />
                     <Entry x:Name="senha_inserida"
-                           Placeholder="Digite sua Senha" PlaceholderColor="Gainsboro"
+                           Placeholder="Digite sua Senha" PlaceholderColor="White"
+                           FontAttributes="Italic"
                            Margin="0,0,0,0" TextColor="White"
-                           IsPassword="True" Style="{StaticResource regular}"
+                           IsPassword="True" 
                            />
 
                     <Button x:Name="btn_acessar"
@@ -74,26 +71,28 @@
                             Clicked="btn_acessar_Clicked"
                             FontAttributes="Bold"
                             FontSize="18"
-                            CornerRadius="15"
-                            BackgroundColor="#0081BD"
+                            BorderColor="Black"
+                            BorderWidth="3"
+                            CornerRadius="18"
+                            BackgroundColor="Transparent"
                             TextColor="white"
                             VerticalOptions="EndAndExpand"
-                            Style="{StaticResource bold}"
+                           
                             />
 
 
                     <Button x:Name="btn_novo_correntista"
                             Text="QUERO SER CLIENTE"
                             Clicked="btn_novo_correntista_Clicked"
-                            CornerRadius="15"
+                            CornerRadius="18"
                             FontAttributes="Bold"
                             FontSize="18"
                             BackgroundColor="Transparent"
-                            BorderColor="white"
+                            BorderColor="Black"
                             TextColor="white"
-                            BorderWidth="2"
+                            BorderWidth="3"
                             VerticalOptions="EndAndExpand"
-                            Style="{StaticResource bold}"
+                            
                             />
 
 

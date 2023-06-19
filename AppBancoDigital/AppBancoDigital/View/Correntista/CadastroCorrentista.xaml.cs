@@ -21,83 +21,28 @@ namespace AppBancoDigital.View
         {
             InitializeComponent();
             NavigationPage.SetHasNavigationBar(this, false);
-            VerNaover_senha.Source = ImageSource.FromResource("AppBancoDigital.Assets.eyeOn.png");
-            VerNaover_senha2.Source = ImageSource.FromResource("AppBancoDigital.Assets.eyeOn.png");
+            
             dtpck_dataNasc.MaximumDate = DateTime.Now;
             dtpck_dataNasc.MinimumDate = new DateTime(1900, 1, 1);
         }
-        bool vendo = false;
-        bool vendo2 = false;
 
-        private void VerNaover_senha_Clicked(object sender, EventArgs e)
+        private async void btn_Cadastrar_Clicked(object sender, EventArgs e)
         {
-           
-            try
-            {
-                if (vendo == false)
-                {
-                    VerNaover_senha.Source = ImageSource.FromResource("AppBancoDigital.Assets.eyeOff.png");
-                    vendo = true;
-                    senha_inserido.IsPassword = false;
-                }
-                else
-                {
-                    VerNaover_senha.Source = ImageSource.FromResource("AppBancoDigital.Assets.eyeOn.png");
-                    vendo = false;
-                    senha_inserido.IsPassword = true;
-                }
-                
-            }
-            catch (Exception ex)
-            {
-                DisplayAlert("Erro!", ex.Message, "OK");
-            }
-
-        }
-
-        private void VerNaover_senha2_Clicked(object sender, EventArgs e)
-        {
-            
-            try
-            {
-                if (vendo2 == false)
-                {
-                    VerNaover_senha2.Source = ImageSource.FromResource("AppBancoDigital.Assets.eyeOff.png");
-                    vendo2 = true;
-                    senhaConfirm_inserido.IsPassword = false;
-                }
-                else
-                {
-                    VerNaover_senha2.Source = ImageSource.FromResource("AppBancoDigital.Assets.eyeOn.png");
-                    vendo2 = false;
-                    senhaConfirm_inserido.IsPassword = true;
-                }
-                
-            }
-            catch (Exception ex)
-            {
-                DisplayAlert("Erro!", ex.Message, "OK");
-            }
-        }
-
-        private async void btn_cadastrar_Clicked(object sender, EventArgs e)
-        {
-            
             try
             {
                 if (senhaConfirm_inserido.Text == senha_inserido.Text)
                 {
                     string senha = senha_inserido.Text;
 
-                    
+
                     Correntista c = new Correntista
                     {
                         Nome = nome_inserido.Text,
-                        CPF = onlynumber(cpf_inserido.Text),
+                        CPF = cpf_inserido.Text,
                         Data_nasc = dtpck_dataNasc.Date.ToString("yyyy-MM-dd"),
                         Senha = senha
                     };
-                   
+
 
                     if (c.Id == null)
                     {
@@ -105,7 +50,7 @@ namespace AppBancoDigital.View
                         App.DadosCorrentista = c;
                         await DisplayAlert("Sucesso!", "Novo Cliente Cadastrado com Sucesso!", "Ir para Tela Inicial");
 
-                        
+
                     }
                     else
                         throw new Exception("Ocorreu um erro ao realizar seu cadastro.\nTente Novamente ou realize o Login se já possui uma conta.");
@@ -114,7 +59,7 @@ namespace AppBancoDigital.View
                 {
                     await DisplayAlert("Senhas diferentes!", "Confirme a senha digitada inicialmente", "OK");
                 }
-               
+
 
             }
             catch (Exception ex)
@@ -125,8 +70,6 @@ namespace AppBancoDigital.View
 
         private void btn_voltar_Clicked(object sender, EventArgs e)
         {
-           
-
             try
             {
                 App.Current.MainPage = new NavigationPage(new Login());
@@ -136,11 +79,14 @@ namespace AppBancoDigital.View
                 DisplayAlert("Erro!", ex.Message, "OK");
             }
         }
-        string onlynumber(string str)
-        {
-            var onlynumber = new Regex(@"[^\d]");
-            return onlynumber.Replace(str, "");
-        }
+    }
+
+
+
+
+
+   
+        
 
     }
-}
+

@@ -6,9 +6,9 @@
     <ContentPage.Background>
         
         <LinearGradientBrush EndPoint="0,1">
-            <GradientStop Color="#CDFFD8"
+            <GradientStop Color="#F5FFFA"
                           Offset="0.1" />
-            <GradientStop Color="#94B9FF"
+            <GradientStop Color="#F5FFFA"
                           Offset="1.0" />
         </LinearGradientBrush>
     </ContentPage.Background>
@@ -27,7 +27,7 @@
 
             <Frame
                   CornerRadius="15"
-                   BorderColor="White"
+                   BorderColor="Black"
                    HeightRequest="600"
                    WidthRequest="320"
                    BackgroundColor="Transparent"
@@ -44,13 +44,21 @@
                            Margin="5,5,0,0"
                           />
 
+
                     <Entry x:Name="cpf_inserido"
-                           Placeholder="Digite seu CPF" PlaceholderColor="White"
+                           Placeholder="Digite seu CPF" PlaceholderColor="Black"
                            FontAttributes="Italic"
                            Margin="3, 0, 5,0"
-                           TextColor="White"
-                           MaxLength="14" Keyboard="Numeric"/>
-                    
+                           TextColor="Black"
+                           MaxLength="14" Keyboard="Numeric">
+
+                        <Entry.Behaviors>
+                            <xct:MaskedBehavior
+                                Mask="AAA.AAA.AAA-AA"
+                                UnMaskedCharacter="A"/>
+                        </Entry.Behaviors>
+                    </Entry>
+
 
 
                     <Label Text="Nome Completo" 
@@ -59,8 +67,8 @@
                            Margin="5,5,0,0"
                            />
                     <Entry x:Name="nome_inserido"
-                           Placeholder="Digite seu Nome Completo" PlaceholderColor="white"
-                           Margin="3,0,5,0" TextColor="White" FontAttributes="Italic"
+                           Placeholder="Digite seu Nome Completo" PlaceholderColor="Black"
+                           Margin="3,0,5,0" TextColor="Black" FontAttributes="Italic"
                           />
 
 
@@ -77,7 +85,7 @@
                                             BackgroundColor="Transparent" 
                                             Margin="0,0,110,0"
                                             FontAttributes="Bold"
-                                            TextColor="white"
+                                            TextColor="Black"
                                             
                                            
                                             />
@@ -91,9 +99,9 @@
 
                     <Entry x:Name="senha_inserido"
                        Grid.Column="0"
-                       Placeholder="Digite a Senha" PlaceholderColor="White"
+                       Placeholder="Digite a Senha" PlaceholderColor="Black"
                        FontAttributes="Italic"
-                       Margin="3,0,0,0" TextColor="White"
+                       Margin="3,0,0,0" TextColor="Black"
                        IsPassword="True"
                       
                            />
@@ -109,10 +117,10 @@
 
                     <Entry x:Name="senhaConfirm_inserido"
                            Grid.Column="0"
-                           Placeholder="Digite a Senha Novamente" PlaceholderColor="White"
+                           Placeholder="Digite a Senha Novamente" PlaceholderColor="Black"
                            FontAttributes="Italic"
                            Margin="3,0,5,0"
-                           TextColor="White"
+                           TextColor="Black"
                            IsPassword="True"/>
 
 
@@ -132,18 +140,18 @@
                                BackgroundColor="Transparent"
                                BorderColor="Black"
                                BorderWidth="3"
-                               TextColor="white"
+                               TextColor="Black"
                                VerticalOptions="End"/>
 
                         <Button x:Name="btn_voltar"
                                 Text="RETORNAR AO LOGIN"
                                 Clicked="btn_voltar_Clicked"
                                 CornerRadius="18" Margin="7,0,7,0"
-                                FontAttributes="italic"
+                                FontAttributes="Italic"
                                 FontSize="15"
                                 BackgroundColor="Transparent"
                                 BorderColor="Black"
-                                TextColor="white"
+                                TextColor="Black"
                                 BorderWidth="3"
                                 VerticalOptions="End"/>
 

@@ -35,7 +35,7 @@ namespace AppBancoDigital.Service
             Console.WriteLine(json_a_enviar);
             Console.WriteLine("__________________________________________________________________");
 
-            string json = await DataService.PostDataToService(json_a_enviar, "/correntista/entrar");
+            string json = await DataService.PostDataToService(json_a_enviar, "/correntista/save");
 
             return JsonConvert.DeserializeObject<Correntista>(json);
         }

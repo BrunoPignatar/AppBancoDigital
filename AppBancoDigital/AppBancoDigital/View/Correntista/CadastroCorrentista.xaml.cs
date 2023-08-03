@@ -35,18 +35,17 @@ namespace AppBancoDigital.View
                     string senha = senha_inserido.Text;
 
 
-                    Correntista c = new Correntista
+                    Correntista c = await DataServiceCorrentista.CadastrarCorrentistas(new Correntista
                     {
                         Nome = nome_inserido.Text,
                         CPF = cpf_inserido.Text,
                         Data_nasc = dtpck_dataNasc.Date.ToString("yyyy-MM-dd"),
                         Senha = senha
-                    };
+                    });
 
 
-                    if (c.Id == null)
+                    if (c.Id != null)
                     {
-                        await DataServiceCorrentista.CadastrarCorrentistas(c);
                         App.DadosCorrentista = c;
                         await DisplayAlert("Sucesso!", "Novo Cliente Cadastrado com Sucesso!", "Ir para Tela Inicial");
 

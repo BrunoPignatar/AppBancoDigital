@@ -2,11 +2,70 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="AppBancoDigital.View.Home">
+    <ContentPage.Background>
+
+        <LinearGradientBrush EndPoint="0,1">
+            <GradientStop Color="#F5FFFA"
+                          Offset="0.1" />
+            <GradientStop Color="#F5FFFA"
+                          Offset="1.0" />
+        </LinearGradientBrush>
+    </ContentPage.Background>   
     <ContentPage.Content>
         <StackLayout>
-            <Label Text="Welcome to Xamarin.Forms!"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
+            <StackLayout Orientation="Horizontal">
+                <ImageButton x:Name="imagem_de_perfil"
+                             BackgroundColor="Gray"
+                             Scale="2"
+                             Padding="15" Margin="20"
+                             CornerRadius="50"/>
+
+
+            </StackLayout>
+            <StackLayout>
+                <Frame
+                   CornerRadius="15"
+                   BorderColor="Black"
+                   HeightRequest="50"
+                   WidthRequest="200"
+                   BackgroundColor="Transparent"
+                   VerticalOptions="StartAndExpand"
+                   HorizontalOptions="StartAndExpand"
+                   Margin="10" >
+
+                    <StackLayout>
+                        <Label Text="Saldo em conta:"
+                           TextColor="Black"/>
+
+
+                        <Label Text="R$   10.500"
+                           TextColor="Black"/>
+                    </StackLayout>
+                </Frame>
+            </StackLayout>
+
+            <StackLayout Orientation="Horizontal">
+                <StackLayout>
+                    <ImageButton x:Name="btn_Pix" Clicked="Pix_Clicked" BackgroundColor="Transparent"
+                             Padding="15" CornerRadius="20" Margin=" 10" BorderWidth="1" BorderColor="Black" WidthRequest="100" HeightRequest="70"/>
+
+                <Label x:Name="lbl_Pix" TextColor="Black" FontSize="15" HorizontalOptions="CenterAndExpand" 
+                       FontAttributes="None" Text="Pix"/>
+                </StackLayout>
+
+                <StackLayout>
+                    <ImageButton x:Name="btn_QrCode" Clicked="btn_QrCode_Clicked" BackgroundColor="Transparent"
+                                 Padding="15" CornerRadius="20" Margin="10" BorderWidth="1" BorderColor="Black" WidthRequest="100" HeightRequest="70"/>
+
+                    <Label x:Name="lbl_QrCode" TextColor="Black" FontSize="15" HorizontalOptions="CenterAndExpand"
+                           FontAttributes="None" Text="Pagar com QR Code"/>
+                </StackLayout>
+            </StackLayout>
+
+            <StackLayout Orientation="Horizontal">
+
+                <Label Text="Sugestões para você" TextColor="Black" FontAttributes="Bold" FontSize="20" Margin="10, 50, 0, 0"/>
+            </StackLayout>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

@@ -22,10 +22,18 @@
     <None Remove="Assets\eyeOff.png" />
     <None Remove="Assets\eyeOn.png" />
     <None Remove="Assets\logo.png" />
+    <None Remove="Assets\pix.png" />
+    <None Remove="Assets\QrCode.png" />
   </ItemGroup>
 
   <ItemGroup>
     <EmbeddedResource Include="Assets\logo.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Assets\pix.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Assets\QrCode.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </EmbeddedResource>
   </ItemGroup>

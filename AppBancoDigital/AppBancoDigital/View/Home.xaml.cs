@@ -15,6 +15,20 @@ namespace AppBancoDigital.View
         public Home()
         {
             InitializeComponent();
+            NavigationPage.SetHasNavigationBar(this, false);
+
+            btn_Pix.Source = ImageSource.FromResource("AppBancoDigital.Assets.pix.png");
+            btn_QrCode.Source = ImageSource.FromResource("AppBancoDigital.Assets.QrCode.png");
+        }
+
+        private void Pix_Clicked(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btn_QrCode_Clicked(object sender, EventArgs e)
+        {
+
         }
     }
 }

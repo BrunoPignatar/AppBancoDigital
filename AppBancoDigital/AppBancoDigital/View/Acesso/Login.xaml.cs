@@ -66,5 +66,18 @@ namespace AppBancoDigital.View
             var onlynumber = new Regex(@"[^\d]");
             return onlynumber.Replace(str, "");
         }
+
+        private async void Button_Clicked(object sender, EventArgs e)
+        {
+            try
+            {
+
+                Navigation.PushAsync(new View.Home());
+            }
+            catch (Exception ex)
+            {
+                DisplayAlert("Erro!", ex.Message, "OK");
+            }
+        }
     }
 }

@@ -20,6 +20,17 @@
                              Padding="15" Margin="20"
                              CornerRadius="50"/>
 
+                <Label Text="Olá, teste" TextColor="Black" FontAttributes="Bold" FontSize="20" Margin="10, 20, 0, 0"/>
+
+
+                <!--<Label x:Name="lblboasvindas"  
+                       TextColor="#8C52FF" 
+                       FontSize="20" 
+                       Margin="15,0,5,0"
+                       HorizontalTextAlignment="Start" 
+                       FontAttributes="Bold"
+                       VerticalTextAlignment="Center"/>-->
+
 
             </StackLayout>
             <StackLayout>
@@ -43,8 +54,11 @@
                     </StackLayout>
                 </Frame>
             </StackLayout>
+            
+            <Label Text="Sugestões para você" TextColor="Black" FontAttributes="Bold" FontSize="20" Margin="10, 50, 0, 0"/>
+            
+            <StackLayout Orientation="Horizontal" >
 
-            <StackLayout Orientation="Horizontal">
                 <StackLayout>
                     <ImageButton x:Name="btn_Pix" Clicked="Pix_Clicked" BackgroundColor="Transparent"
                              Padding="15" CornerRadius="20" Margin=" 10" BorderWidth="1" BorderColor="Black" WidthRequest="100" HeightRequest="70"/>
@@ -58,14 +72,32 @@
                                  Padding="15" CornerRadius="20" Margin="10" BorderWidth="1" BorderColor="Black" WidthRequest="100" HeightRequest="70"/>
 
                     <Label x:Name="lbl_QrCode" TextColor="Black" FontSize="15" HorizontalOptions="CenterAndExpand"
-                           FontAttributes="None" Text="Pagar com QR Code"/>
+                           FontAttributes="None" Text="QR Code"/>
+                </StackLayout>
+
+                <StackLayout>
+                    <ImageButton x:Name="btn_poupanca" Clicked="btn_poupanca_Clicked" BackgroundColor="Transparent"
+                                 Padding="15" CornerRadius="20" Margin="10" BorderWidth="1" BorderColor="Black" WidthRequest="100" HeightRequest="70"/>
+
+                    <Label x:Name="lbl_poupanca" TextColor="Black" FontSize="15" HorizontalOptions="CenterAndExpand" 
+                           FontAttributes="None" Text="Criar Poupança"/>
                 </StackLayout>
             </StackLayout>
 
-            <StackLayout Orientation="Horizontal">
+            
 
-                <Label Text="Sugestões para você" TextColor="Black" FontAttributes="Bold" FontSize="20" Margin="10, 50, 0, 0"/>
-            </StackLayout>
+            <!--<StackLayout Orientation="Horizontal">
+                <Frame
+                    CornerRadius="15"
+                    BorderColor="Black"
+                    HeightRequest="60"
+                    WidthRequest="400"
+                    BackgroundColor="Transparent"
+                    VerticalOptions="StartAndExpand"
+                    HorizontalOptions="StartAndExpand"
+                    Margin="10">
+                </Frame>
+            </StackLayout>--> 
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

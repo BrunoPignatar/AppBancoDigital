@@ -19,6 +19,7 @@ namespace AppBancoDigital.View
 
             btn_Pix.Source = ImageSource.FromResource("AppBancoDigital.Assets.pix.png");
             btn_QrCode.Source = ImageSource.FromResource("AppBancoDigital.Assets.QrCode.png");
+            btn_poupanca.Source = ImageSource.FromResource("AppBancoDigital.Assets.Porco.png");
         }
 
         private void Pix_Clicked(object sender, EventArgs e)
@@ -27,6 +28,11 @@ namespace AppBancoDigital.View
         }
 
         private void btn_QrCode_Clicked(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btn_poupanca_Clicked(object sender, EventArgs e)
         {
 
         }

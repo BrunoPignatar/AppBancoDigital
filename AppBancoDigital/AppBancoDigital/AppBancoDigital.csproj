@@ -23,7 +23,9 @@
     <None Remove="Assets\eyeOn.png" />
     <None Remove="Assets\logo.png" />
     <None Remove="Assets\pix.png" />
+    <None Remove="Assets\porco.png" />
     <None Remove="Assets\QrCode.png" />
+    <None Remove="Porco.png" />
   </ItemGroup>
 
   <ItemGroup>
@@ -34,6 +36,9 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </EmbeddedResource>
     <EmbeddedResource Include="Assets\QrCode.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Assets\Porco.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </EmbeddedResource>
   </ItemGroup>

@@ -21,6 +21,7 @@ namespace AppBancoDigital.View
             btn_Pix.Source = ImageSource.FromResource("AppBancoDigital.Assets.pix.png");
             btn_QrCode.Source = ImageSource.FromResource("AppBancoDigital.Assets.QrCode.png");
             btn_poupanca.Source = ImageSource.FromResource("AppBancoDigital.Assets.Porco.png");
+            userName.Text = "Olá, " + App.DadosCorrentista.Nome;
         }
 
         private void Pix_Clicked(object sender, EventArgs e)

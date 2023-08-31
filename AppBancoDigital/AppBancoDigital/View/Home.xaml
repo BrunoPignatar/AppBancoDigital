@@ -20,7 +20,7 @@
                              Padding="15" Margin="20"
                              CornerRadius="50"/>
 
-                <Label Text="Olá, teste" TextColor="Black" FontAttributes="Bold" FontSize="20" Margin="10, 20, 0, 0"/>
+                <Label x:Name="userName" Text="Olá, teste" TextColor="Black" FontAttributes="Bold" FontSize="20" Margin="10, 20, 0, 0"/>
 
 
                 <!--<Label x:Name="lblboasvindas"  
@@ -49,7 +49,7 @@
                            TextColor="Black"/>
 
 
-                        <Label Text="R$   10.500"
+                        <Label Text="R$   500"
                            TextColor="Black"/>
                     </StackLayout>
                 </Frame>

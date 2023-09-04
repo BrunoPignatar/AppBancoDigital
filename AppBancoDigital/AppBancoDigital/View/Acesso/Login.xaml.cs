@@ -25,7 +25,9 @@ namespace AppBancoDigital.View
         {
             try
             {
-                
+                popupLoadingView.IsVisible = true;
+                await Task.Delay(3000);
+                popupLoadingView.IsVisible = false;
 
                 Model.Correntista c = await DataServiceCorrentista.LoginAsync(new Model.Correntista
                 {

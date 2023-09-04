@@ -14,6 +14,8 @@
     </ContentPage.Background>
     <ContentPage.Content>
         <StackLayout>
+
+          
             
             <Image x:Name="logo"
                    HeightRequest="200"
@@ -103,6 +105,13 @@
 
                 </StackLayout>
             </Frame>
+            <ContentView x:Name="popupLoadingView"  Padding="-10" IsVisible="false" AbsoluteLayout.LayoutBounds="0, 0, 1, 1" AbsoluteLayout.LayoutFlags="All">
+                <StackLayout VerticalOptions="Center" HorizontalOptions="Center">
+                    <StackLayout Orientation="Vertical" HeightRequest="120" WidthRequest="150">
+                        <ActivityIndicator x:Name="activityIndicator" Margin="10, 0, 10, 0" VerticalOptions="Center" HorizontalOptions="Center" Color="Black" IsRunning="True" WidthRequest="60" HeightRequest="60"/>
+                    </StackLayout>
+                </StackLayout>
+            </ContentView>
 
 
         </StackLayout>

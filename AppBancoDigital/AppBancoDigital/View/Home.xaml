@@ -74,14 +74,6 @@
                     <Label x:Name="lbl_QrCode" TextColor="Black" FontSize="15" HorizontalOptions="CenterAndExpand"
                            FontAttributes="None" Text="QR Code"/>
                 </StackLayout>
-
-                <StackLayout>
-                    <ImageButton x:Name="btn_poupanca" Clicked="btn_poupanca_Clicked" BackgroundColor="Transparent"
-                                 Padding="15" CornerRadius="20" Margin="10" BorderWidth="1" BorderColor="Black" WidthRequest="100" HeightRequest="70"/>
-
-                    <Label x:Name="lbl_poupanca" TextColor="Black" FontSize="15" HorizontalOptions="CenterAndExpand" 
-                           FontAttributes="None" Text="Criar Poupança"/>
-                </StackLayout>
             </StackLayout>
 
             

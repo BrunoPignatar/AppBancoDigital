@@ -23,7 +23,6 @@
     <None Remove="Assets\eyeOn.png" />
     <None Remove="Assets\logo.png" />
     <None Remove="Assets\pix.png" />
-    <None Remove="Assets\porco.png" />
     <None Remove="Assets\QrCode.png" />
     <None Remove="Porco.png" />
   </ItemGroup>
@@ -36,9 +35,6 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </EmbeddedResource>
     <EmbeddedResource Include="Assets\QrCode.png">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Assets\Porco.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </EmbeddedResource>
   </ItemGroup>
@@ -67,9 +63,6 @@
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
     <EmbeddedResource Update="View\Pagina inicial\Pix.xaml">
-      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
-    </EmbeddedResource>
-    <EmbeddedResource Update="View\Pagina inicial\Poupanca.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
     <EmbeddedResource Update="View\Pagina inicial\QrCode.xaml">

@@ -104,17 +104,6 @@
                 </StackLayout>
             </Frame>
 
-            <Button Text="pagina inicial"
-                    Clicked="Button_Clicked"
-                    CornerRadius="18"
-                    FontAttributes="Bold"
-                    FontSize="18"
-                    BackgroundColor="Transparent"
-                    BorderColor="Black"
-                    TextColor="Black"
-                    BorderWidth="3"
-                    VerticalOptions="EndAndExpand"/>
-
 
         </StackLayout>
     </ContentPage.Content>

@@ -20,7 +20,6 @@ namespace AppBancoDigital.View
 
             btn_Pix.Source = ImageSource.FromResource("AppBancoDigital.Assets.pix.png");
             btn_QrCode.Source = ImageSource.FromResource("AppBancoDigital.Assets.QrCode.png");
-            btn_poupanca.Source = ImageSource.FromResource("AppBancoDigital.Assets.Porco.png");
             userName.Text = "Olá, " + App.DadosCorrentista.Nome;
         }
 
@@ -48,16 +47,7 @@ namespace AppBancoDigital.View
             }
         }
 
-        private void btn_poupanca_Clicked(object sender, EventArgs e)
-        {
-            try
-            {
-                App.Current.MainPage = new NavigationPage(new Poupanca());
-            }
-            catch (Exception ex)
-            {
-                DisplayAlert("Erro!", ex.Message, "OK");
-            }
-        }
+       
+        
     }
 }

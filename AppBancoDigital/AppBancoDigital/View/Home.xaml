@@ -75,6 +75,14 @@
                     <Label x:Name="lbl_QrCode" TextColor="Black" FontSize="15" HorizontalOptions="CenterAndExpand"
                            FontAttributes="None" Text="QR Code"/>
                 </StackLayout>
+
+                <StackLayout>
+                    <ImageButton x:Name="btn_scanner" Clicked="btn_scanner_Clicked" BackgroundColor="Transparent"
+                                 Padding="15" CornerRadius="20" Margin="10" BorderWidth="1" BorderColor="Black" WidthRequest="100" HeightRequest="70"/>
+                    
+                    <Label x:Name="lbl_Scanner" TextColor="Black" FontSize="15" HorizontalOptions="CenterAndExpand"
+                           FontAttributes="None" Text="Scanner"/>
+                </StackLayout>
             </StackLayout>
 
             

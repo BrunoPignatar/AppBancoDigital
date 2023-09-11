@@ -31,5 +31,17 @@ namespace AppBancoDigital.View.Pagina_inicial
             byte[] qrCodeBytes = qRCode.GetGraphic(20);
             img_qr.Source = ImageSource.FromStream(() => new MemoryStream(qrCodeBytes));
         }
+
+        private void Button_Clicked_1(object sender, EventArgs e)
+        {
+            try
+            {
+                App.Current.MainPage = new NavigationPage(new Home());
+            }
+            catch (Exception ex)
+            {
+                DisplayAlert("Erro!", ex.Message, "OK");
+            }
+        }
     }
 }

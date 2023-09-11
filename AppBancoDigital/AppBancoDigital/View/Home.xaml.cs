@@ -1,4 +1,5 @@
-﻿using AppBancoDigital.View.Pagina_inicial;
+﻿using AppBancoDigital.Model;
+using AppBancoDigital.View.Pagina_inicial;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -18,6 +19,7 @@ namespace AppBancoDigital.View
             InitializeComponent();
             NavigationPage.SetHasNavigationBar(this, false);
 
+            btn_scanner.Source = ImageSource.FromResource("AppBancoDigital.Assets.scanner.png");
             btn_Pix.Source = ImageSource.FromResource("AppBancoDigital.Assets.pix.png");
             btn_QrCode.Source = ImageSource.FromResource("AppBancoDigital.Assets.QrCode.png");
             userName.Text = "Olá, " + App.DadosCorrentista.Nome;
@@ -49,7 +51,26 @@ namespace AppBancoDigital.View
 
         private void imagem_de_perfil_Clicked(object sender, EventArgs e)
         {
-           
+            try
+            {
+                App.Current.MainPage = new NavigationPage(new PerfilCorrentista());
+            }
+            catch (Exception ex)
+            {
+                DisplayAlert("Erro!", ex.Message, "OK");
+            } 
+        }
+
+        private void btn_scanner_Clicked(object sender, EventArgs e)
+        {
+            try
+            {
+                App.Current.MainPage = new NavigationPage(new Scanner());
+            }
+            catch (Exception ex)
+            {
+                DisplayAlert("Erro!", ex.Message, "OK");
+            }
         }
     }
 }

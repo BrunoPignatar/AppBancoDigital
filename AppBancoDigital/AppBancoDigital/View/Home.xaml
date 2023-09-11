@@ -15,6 +15,7 @@
         <StackLayout>
             <StackLayout Orientation="Horizontal">
                 <ImageButton x:Name="imagem_de_perfil"
+                             Clicked="imagem_de_perfil_Clicked"
                              BackgroundColor="Gray"
                              Scale="2"
                              Padding="15" Margin="20"

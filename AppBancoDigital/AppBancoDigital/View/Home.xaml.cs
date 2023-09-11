@@ -47,7 +47,9 @@ namespace AppBancoDigital.View
             }
         }
 
-       
-        
+        private void imagem_de_perfil_Clicked(object sender, EventArgs e)
+        {
+           
+        }
     }
 }

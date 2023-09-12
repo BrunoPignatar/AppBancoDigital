@@ -15,6 +15,7 @@ namespace AppBancoDigital.View
         public PerfilCorrentista()
         {
             InitializeComponent();
+            NavigationPage.SetHasNavigationBar(this, false);
         }
     }
 }

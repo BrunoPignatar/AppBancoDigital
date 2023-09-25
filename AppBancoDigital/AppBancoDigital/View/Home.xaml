@@ -16,10 +16,14 @@
             <StackLayout Orientation="Horizontal">
                 <ImageButton x:Name="imagem_de_perfil"
                              Clicked="imagem_de_perfil_Clicked"
-                             BackgroundColor="Gray"
-                             Scale="2"
-                             Padding="15" Margin="20"
-                             CornerRadius="50"/>
+                             BackgroundColor="Transparent"
+                             Scale="1.4"
+                             HeightRequest="50"
+                             WidthRequest="50"
+                             Padding="3"
+                             Margin="10"
+                             CornerRadius="50"
+                             Aspect="AspectFill"/>
 
                 <Label x:Name="userName" Text="Olá, teste" TextColor="Black" FontAttributes="Bold" FontSize="20" Margin="10, 20, 0, 0"/>
 
@@ -50,7 +54,7 @@
                            TextColor="Black"/>
 
 
-                        <Label Text="R$   500"
+                        <Label x:Name="lblsaldo" Text="R$ "
                            TextColor="Black"/>
                     </StackLayout>
                 </Frame>

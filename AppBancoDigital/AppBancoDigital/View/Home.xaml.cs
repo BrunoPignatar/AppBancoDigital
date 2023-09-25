@@ -23,6 +23,14 @@ namespace AppBancoDigital.View
             btn_Pix.Source = ImageSource.FromResource("AppBancoDigital.Assets.pix.png");
             btn_QrCode.Source = ImageSource.FromResource("AppBancoDigital.Assets.QrCode.png");
             userName.Text = "Olá, " + App.DadosCorrentista.Nome;
+
+            // lblsaldo.Text = App.DadosConta.ToString();
+
+            if (App.DadosCorrentista.ImagemEnviada != null)
+            {
+                imagem_de_perfil.Source = App.DadosCorrentista.ImagemEnviada;
+               
+            }
         }
 
         private void Pix_Clicked(object sender, EventArgs e)

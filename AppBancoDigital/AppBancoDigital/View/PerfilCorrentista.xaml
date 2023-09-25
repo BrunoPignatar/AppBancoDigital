@@ -13,7 +13,78 @@
     </ContentPage.Background>
     <ContentPage.Content>
         <StackLayout>
-           
+            <Button
+                Margin="0,50,0,0"
+                Scale="1.5"
+                CornerRadius="100"
+                HeightRequest="90"
+                BorderColor="Black"
+                BorderWidth="1"
+                WidthRequest="90"
+                BackgroundColor="Gray"
+                TextColor="White" FontAttributes="Bold"
+                HorizontalOptions="CenterAndExpand"/>
+
+            <Button x:Name="addfoto"
+                    Clicked="addfoto_Clicked"
+                    Text="Adicionar foto"
+                    BackgroundColor="Transparent"
+                    Margin="100, 10, 100, 0"
+                    FontAttributes="Italic"
+                    FontSize="Small"
+                    CornerRadius="100"
+                    HeightRequest="50"                    
+                    />
+
+
+            <Label Text="Meu Perfil"
+                   Margin="10,50,0,0"
+                   FontSize="15"
+                   FontAttributes="None"
+                   TextDecorations="Underline"
+                   TextColor="Black"
+                   />
+
+            <Frame Margin="10,10,10,0"
+                   CornerRadius="10"
+                   BorderColor="Black"
+                   >
+                <StackLayout>
+                    <Label Text="Nome"
+                       FontAttributes="Bold"
+                       TextColor="Black"
+                       FontSize="13">
+                    </Label>
+                    <Label x:Name="lblnome">
+                    </Label>
+
+                    <Label></Label>
+
+                    <Label Text="Cpf"
+                           FontAttributes="Bold"
+                           TextColor="Black"
+                           FontSize="13">
+                    </Label>
+
+                    <Label x:Name="lblCPF">
+                    </Label>
+
+                    <Label></Label>
+
+                    <Label Text="Data de Nascimento"
+                           FontAttributes="Bold"
+                           TextColor="Black"
+                           FontSize="13">
+                    </Label>
+
+                    <Label x:Name="lbldatanasc"></Label>
+                </StackLayout>
+
+
+            </Frame>
+
         </StackLayout>
+
+        
     </ContentPage.Content>
 </ContentPage>

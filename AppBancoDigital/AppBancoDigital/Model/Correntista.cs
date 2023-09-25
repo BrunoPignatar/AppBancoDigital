@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using Xamarin.Forms;
 
 namespace AppBancoDigital.Model
 {
@@ -11,5 +12,6 @@ namespace AppBancoDigital.Model
         public string CPF { get; set; }
         public string Data_nasc { get; set; }
         public string Senha { get; set; }
+        public ImageSource ImagemEnviada { get; set; }
     }
 }

@@ -3,6 +3,7 @@ using System;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 using AppBancoDigital.View;
+using AppBancoDigital.Model;
 
 namespace AppBancoDigital
 {
@@ -18,8 +19,8 @@ namespace AppBancoDigital
         /**
          * Armazena os dados do Correntista após o login.
          */
-        public static Model.Correntista DadosCorrentista { get; set; }
-        public static Model.Conta DadosConta { get; set; }  
+        public static Correntista DadosCorrentista { get; set; } = new Correntista();
+        public static Conta DadosConta { get; set; } = new Conta();
 
         protected override void OnStart()
         {

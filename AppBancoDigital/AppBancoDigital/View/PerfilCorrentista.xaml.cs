@@ -18,6 +18,12 @@ namespace AppBancoDigital.View
         public PerfilCorrentista()
         {
             InitializeComponent();
+
+            if(App.DadosCorrentista.ImagemEnviada !=  null)
+            {
+                btn_imagemdeperfil.Source = App.DadosCorrentista.ImagemEnviada;
+            }
+
             NavigationPage.SetHasNavigationBar(this, false);
             lblnome.Text = "@" + App.DadosCorrentista.Nome;
             lblCPF.Text = "" + App.DadosCorrentista.CPF;

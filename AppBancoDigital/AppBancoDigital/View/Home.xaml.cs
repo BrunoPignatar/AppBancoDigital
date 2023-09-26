@@ -23,9 +23,9 @@ namespace AppBancoDigital.View
             btn_Pix.Source = ImageSource.FromResource("AppBancoDigital.Assets.pix.png");
             btn_QrCode.Source = ImageSource.FromResource("AppBancoDigital.Assets.QrCode.png");
             userName.Text = "Olá, " + App.DadosCorrentista.Nome;
-           // lblsaldo.Text = "R$ " + App.DadosConta.Saldo.ToString("C").Replace("$", "");
+            lblsaldo.Text = "R$ " + App.DadosConta.Saldo.ToString("C").Replace("$", "");
 
-            // lblsaldo.Text = App.DadosConta.ToString();
+           //  lblsaldo.Text = App.DadosConta.ToString();
 
             if (App.DadosCorrentista.ImagemEnviada != null)
             {

@@ -18,6 +18,8 @@
                              Clicked="imagem_de_perfil_Clicked"
                              BackgroundColor="Transparent"
                              Scale="1.4"
+                             BorderColor="Black"
+                             BorderWidth="1"
                              HeightRequest="50"
                              WidthRequest="50"
                              Padding="3"
@@ -50,7 +52,7 @@
                    Margin="10" >
 
                     <StackLayout>
-                        <Label Text="Saldo em conta:"
+                        <Label x:Name="txt" Text="Saldo em conta:"
                            TextColor="Black"/>
 
 

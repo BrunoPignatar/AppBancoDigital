@@ -13,7 +13,8 @@
     </ContentPage.Background>
     <ContentPage.Content>
         <StackLayout>
-            <Button
+            <ImageButton
+                x:Name="btn_imagemdeperfil"
                 Margin="0,50,0,0"
                 Scale="1.5"
                 CornerRadius="100"
@@ -22,7 +23,6 @@
                 BorderWidth="1"
                 WidthRequest="90"
                 BackgroundColor="Gray"
-                TextColor="White" FontAttributes="Bold"
                 HorizontalOptions="CenterAndExpand"/>
 
             <Button x:Name="addfoto"
@@ -82,6 +82,17 @@
 
 
             </Frame>
+
+            <Button
+                Clicked="Button_Clicked"
+                Text="Voltar"
+                BackgroundColor="Transparent"
+                Margin="100, 190, 100, 0"
+                FontAttributes="Italic"
+                FontSize="Small"
+                CornerRadius="100"
+                HeightRequest="50">
+            </Button>
 
         </StackLayout>
 

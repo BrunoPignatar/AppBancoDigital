@@ -19,16 +19,29 @@
   </ItemGroup>
 
   <ItemGroup>
+    <None Remove="Assets\back.png" />
+    <None Remove="Assets\cobrarcompix.png" />
+    <None Remove="Assets\copiaecola.png" />
     <None Remove="Assets\eyeOff.png" />
     <None Remove="Assets\eyeOn.png" />
     <None Remove="Assets\logo.png" />
     <None Remove="Assets\pix.png" />
     <None Remove="Assets\QrCode.png" />
     <None Remove="Assets\scanner.png" />
+    <None Remove="Assets\trans.png" />
     <None Remove="Porco.png" />
   </ItemGroup>
 
   <ItemGroup>
+    <EmbeddedResource Include="Assets\back.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Assets\cobrarcompix.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Assets\copiaecola.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
     <EmbeddedResource Include="Assets\logo.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </EmbeddedResource>
@@ -39,6 +52,9 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </EmbeddedResource>
     <EmbeddedResource Include="Assets\scanner.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Assets\trans.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </EmbeddedResource>
   </ItemGroup>

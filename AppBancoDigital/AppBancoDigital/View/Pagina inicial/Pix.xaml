@@ -2,9 +2,110 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="AppBancoDigital.View.Pagina_inicial.Pix">
+    <ContentPage.Background>
+
+        <LinearGradientBrush EndPoint="0,1">
+            <GradientStop Color="#F5FFFA"
+                      Offset="0.1" />
+            <GradientStop Color="#F5FFFA"
+                      Offset="1.0" />
+        </LinearGradientBrush>
+    </ContentPage.Background>
     <ContentPage.Content>
         <StackLayout>
-        
+            <StackLayout Orientation="Horizontal">
+                <ImageButton x:Name="btn_voltar"
+                             Clicked="voltar_Clicked"
+                             BackgroundColor="Transparent"
+                             Scale="0.9"
+                             BorderColor="Black"
+                             BorderWidth="0"
+                             HeightRequest="50"
+                             WidthRequest="50"
+                             Padding="3"
+                             Margin="10"
+                             CornerRadius="50"
+                             Aspect="AspectFill"/>
+
+                <Label Text="Área Pix" TextColor="Black" Margin="17" FontSize="20" HorizontalOptions="StartAndExpand" 
+                       FontAttributes="Bold"/>
+            </StackLayout>
+
+            <Label TextColor="Black" Margin="10" FontSize="20" HorizontalOptions="StartAndExpand"
+                   FontAttributes="Bold" Text="Enviar ou Receber"/>
+
+            <StackLayout Orientation="Horizontal">
+                <StackLayout>
+                    <ImageButton x:Name="btn_transferir" Clicked="btn_transferir_Clicked"
+                                 BackgroundColor="Transparent"
+                                 Padding="15" CornerRadius="20" Margin=" 10" 
+                                 BorderWidth="1" BorderColor="Black" WidthRequest="100" HeightRequest="70"/>
+
+                    <Label x:Name="lbl_transferencia" TextColor="Black" FontSize="15" HorizontalOptions="CenterAndExpand" 
+                       FontAttributes="None" Text="Transferir"/>
+                </StackLayout>
+
+                <StackLayout>
+                    <ImageButton x:Name="btn_pixcopiaecola" Clicked="btn_pixcopiaecola_Clicked"
+                                 BackgroundColor="Transparent"
+                                 Padding="15" CornerRadius="20" Margin=" 10" 
+                                 BorderWidth="1" BorderColor="Black" WidthRequest="100" HeightRequest="70"/>
+
+                    <Label x:Name="lbl_pixcopiaecola" TextColor="Black" FontSize="15" HorizontalOptions="CenterAndExpand" 
+                       FontAttributes="None" Text="Pix Copia e Cola"/>
+                </StackLayout>
+
+                <StackLayout>
+                    <ImageButton x:Name="btn_cobrarcompix" Clicked="btn_cobrarcompix_Clicked"
+                                 BackgroundColor="Transparent"
+                                 Padding="15" CornerRadius="20" Margin=" 10" 
+                                 BorderWidth="1" BorderColor="Black" WidthRequest="100" HeightRequest="70"/>
+
+                    <Label x:Name="lbl_cobrarcompix" TextColor="Black" FontSize="15" HorizontalOptions="CenterAndExpand" 
+                       FontAttributes="None" Text="Cobrar com Pix"/>
+                </StackLayout>
+            </StackLayout>
+
+            <Label/>
+            <Label/>
+            <Label/>
+            <Label/>
+            <Label/>
+            <Label/>
+            <Label/>
+            <Label/>
+
+            <StackLayout>
+                <Label TextColor="Black" Margin="10" FontSize="20" HorizontalOptions="StartAndExpand"
+                       FontAttributes="Bold" Text=" Minhas Chaves"/>
+
+                <StackLayout>
+
+                    <Frame x:Name="minhaschaves"
+                       CornerRadius="15"
+                       BorderColor="Black"
+                       HeightRequest="70"
+                       WidthRequest="400"
+                       BackgroundColor="Transparent"
+                       VerticalOptions="StartAndExpand"
+                       HorizontalOptions="StartAndExpand"
+                       Margin="10">
+
+                        <StackLayout>
+
+                            <Label TextColor="Black" FontSize="15" HorizontalOptions="Start" 
+                           FontAttributes="None" Text="CPF"/>
+
+
+
+                        <Label x:Name="lbl_minhaschaves" TextColor="Black" FontSize="15" FontAttributes="Bold"/>
+
+                        </StackLayout>
+
+
+                    </Frame>
+                </StackLayout>
+            </StackLayout>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>
